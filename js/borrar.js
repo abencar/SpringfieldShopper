@@ -1,13 +1,13 @@
-var image = document.querySelector('.media');
-var touchCount = 0;
-image.addEventListener('click', function () {
-    touchCount++;
-    if (touchCount === 3) {
+document.addEventListener('DOMContentLoaded', (event) => {
+    eliminarImagen();
+});
+
+function eliminarImagen() {
+    var image = document.querySelector('.media');
+    image.addEventListener('click', function () {
         var confirmDelete = confirm('¿Estás seguro de que quieres borrar esta imagen?');
         if (confirmDelete) {
             image.remove();
-        } else {
-            touchCount = 0;
         }
-    }
-});
+    })
+};
